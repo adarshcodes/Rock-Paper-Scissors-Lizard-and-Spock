@@ -1,0 +1,49 @@
+.scoreboard {
+        text-transform: uppercase;
+        margin: 5.2rem 0 0 1rem;
+        border-radius: 1.8rem;
+        border: 0.4rem solid $color-secondary-outline;
+        width: 78.7rem;
+        height: 17.2rem;
+        padding: 0 2.5rem 0 3.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__list {
+                margin-top: -1rem;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+
+                &__items {
+                        font-weight: 700;
+                        font-size: 4.5rem;
+                        line-height: 3.6rem;
+                }
+        }
+
+        &__score-display {
+                background-color: $color-primary-white;
+                width: 16.8rem;
+                height: 12.8rem;
+                border-radius: .86rem;
+                display: flex;
+                justify-content: center;
+                padding: 1.7rem 0 0 .4rem;
+
+                &__text{
+                        letter-spacing: .17rem;
+                        font-size: 2rem;
+                        text-align: center;
+                        color: $color-secondary-text;
+                 span {
+                        display: block;
+                        font-size: 7rem;
+                        color: $color-secondary-dark-text;
+                        margin-top: -.8rem;
+                 }
+                }
+        }
+}

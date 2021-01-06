@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
- 
+
     <!-- displays site properly based on user's device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,12 +15,11 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;600:700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font-awesome -->
-    <link href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css" rel="stylesheet">
+    <!-- <link href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css" rel="stylesheet"> -->
 
 </head>
 
@@ -28,19 +27,44 @@
 
     <div class="container">
 
-        hey there!
+        <!-- Scoreboard Section -->
+        <div class="scoreboard">
+            <ul class="scoreboard__list">
+                <li class="scoreboard__list__items">Rock</li>
+                <li class="scoreboard__list__items">Paper</li>
+                <li class="scoreboard__list__items">Scissors</li>
+            </ul>
 
+            <div class="scoreboard__score-display">
+                <h2 class="scoreboard__score-display__text">
+                    Score
+                    <span class="scoreboard__score-display__score" id="score">12</span>
+                </h2>
+            </div>
+        </div>
+        <!-- End of Scoreboard Section -->
+
+        <!-- Main-Game Section -->
+        <main class="main-game">
+            <div class="main-game__container">
+                <img src="./images/bg-triangle.svg" alt="Triangle" class="main-game__triangle">
+
+                <div class="main-game__circle" id="paper">
+                    <img src="./images/icon-paper.svg" alt="paper" class="paper-img">
+                </div>
+                <!-- <div class="main-game__circle" id="rock">
+                <img src="./images/icon-rock.svg" alt="rock" class="rock-img">
+            </div>
+            <div class="main-game__circle" id="scissors">
+                <img src="./images/icon-scissors.svg" alt="scissors" class="scissors-img">
+            </div> -->
+            </div>
+        </main>
+        <!-- End of Main-Game Section -->
 
 
 
     </div>
-
-
-
-    <!-- <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
-    </div> -->
 </body>
 
 </html>

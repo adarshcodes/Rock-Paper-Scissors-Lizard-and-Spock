@@ -19,10 +19,126 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-image: radial-gradient(circle, #1f3756, #141539);
+  background-attachment: fixed;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 body .container {
+  margin: 0 auto;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreboard {
+  text-transform: uppercase;
+  margin: 5.2rem 0 0 1rem;
+  border-radius: 1.8rem;
+  border: 0.4rem solid #606e85;
+  width: 78.7rem;
+  height: 17.2rem;
+  padding: 0 2.5rem 0 3.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreboard__list {
+  margin-top: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+.scoreboard__list__items {
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 3.6rem;
+}
+
+.scoreboard__score-display {
+  background-color: #fff;
+  width: 16.8rem;
+  height: 12.8rem;
+  border-radius: .86rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.7rem 0 0 .4rem;
+}
+
+.scoreboard__score-display__text {
+  letter-spacing: .17rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #2a46c0;
+}
+
+.scoreboard__score-display__text span {
+  display: block;
+  font-size: 7rem;
+  color: #3b4363;
+  margin-top: -.8rem;
+}
+
+.main-game {
+  padding: 5rem 0 0 0;
+}
+
+.main-game__container {
+  position: relative;
+}
+
+.main-game__triangle {
+  width: 32rem;
+  height: 30rem;
+  margin: 12rem 0 0 1rem;
+}
+
+.main-game__circle {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
