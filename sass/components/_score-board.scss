@@ -18,6 +18,7 @@
                 list-style: none;
 
                 &__items {
+                        color: $color-primary-white;
                         font-weight: 700;
                         font-size: 4.5rem;
                         line-height: 3.6rem;
@@ -33,17 +34,18 @@
                 justify-content: center;
                 padding: 1.7rem 0 0 .4rem;
 
-                &__text{
+                &__text {
                         letter-spacing: .17rem;
                         font-size: 2rem;
                         text-align: center;
                         color: $color-secondary-text;
-                 span {
-                        display: block;
-                        font-size: 7rem;
-                        color: $color-secondary-dark-text;
-                        margin-top: -.8rem;
-                 }
+
+                        span {
+                                display: block;
+                                font-size: 7rem;
+                                color: $color-secondary-dark-text;
+                                margin-top: -.8rem;
+                        }
                 }
         }
 }

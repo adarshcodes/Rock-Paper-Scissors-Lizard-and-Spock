@@ -3,6 +3,96 @@
 /*### Neutral ###*/
 /*### Background ###*/
 /* FONT VARIABLES */
+/* Intial animation for the Circle */
+@-webkit-keyframes init-circle-paper {
+  0% {
+    -webkit-transform: translate(16rem, 115px) scale(0.1) rotate(360deg);
+            transform: translate(16rem, 115px) scale(0.1) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate() scale(1);
+            transform: translate() scale(1);
+  }
+}
+@keyframes init-circle-paper {
+  0% {
+    -webkit-transform: translate(16rem, 115px) scale(0.1) rotate(360deg);
+            transform: translate(16rem, 115px) scale(0.1) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate() scale(1);
+            transform: translate() scale(1);
+  }
+}
+
+@-webkit-keyframes init-circle-scissors {
+  0% {
+    -webkit-transform: translate(-16rem, 115px) scale(0.1) rotate(360deg);
+            transform: translate(-16rem, 115px) scale(0.1) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate() scale(1);
+            transform: translate() scale(1);
+  }
+}
+
+@keyframes init-circle-scissors {
+  0% {
+    -webkit-transform: translate(-16rem, 115px) scale(0.1) rotate(360deg);
+            transform: translate(-16rem, 115px) scale(0.1) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate() scale(1);
+            transform: translate() scale(1);
+  }
+}
+
+@-webkit-keyframes init-circle-rock {
+  0% {
+    -webkit-transform: translateY(-145px) scale(0.1) rotate(360deg);
+            transform: translateY(-145px) scale(0.1) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate() scale(1);
+            transform: translate() scale(1);
+  }
+}
+
+@keyframes init-circle-rock {
+  0% {
+    -webkit-transform: translateY(-145px) scale(0.1) rotate(360deg);
+            transform: translateY(-145px) scale(0.1) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translate() scale(1);
+            transform: translate() scale(1);
+  }
+}
+
+/* End of Intial animation for the Circle */
+/* Image animation for the Circle */
+@-webkit-keyframes img-animation {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+@keyframes img-animation {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+/* End of Image animation for the Circle */
 *,
 *::after,
 *::before {
@@ -76,6 +166,7 @@ body .container {
 }
 
 .scoreboard__list__items {
+  color: #fff;
   font-weight: 700;
   font-size: 4.5rem;
   line-height: 3.6rem;
@@ -110,7 +201,7 @@ body .container {
 }
 
 .main-game {
-  padding: 5rem 0 0 0;
+  padding: 5rem 0 30rem 0;
 }
 
 .main-game__container {
@@ -123,12 +214,10 @@ body .container {
   margin: 12rem 0 0 1rem;
 }
 
-.main-game__circle {
+.main-game__circle-paper {
   position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 10rem;
-  height: 10rem;
+  width: 22rem;
+  height: 22rem;
   border-radius: 50%;
   background: #fff;
   display: -webkit-box;
@@ -140,5 +229,116 @@ body .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  top: 2rem;
+  left: -9.5rem;
+  border: 2.4rem solid #5671f5;
+  -webkit-box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #2945C1;
+          box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #2945C1;
+  -webkit-animation: init-circle-paper .6s;
+          animation: init-circle-paper .6s;
+}
+
+.main-game__circle-paper:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.main-game__circle-paper__paper-img {
+  margin: 1rem .4rem 0 0;
+  width: 7.5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main-game__circle-paper:hover .main-game__circle-paper__paper-img {
+  -webkit-animation: img-animation 1s alternate infinite;
+          animation: img-animation 1s alternate infinite;
+}
+
+.main-game__circle-scissors {
+  top: 2rem;
+  right: -10.5rem;
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border: 2.6rem solid #eca922;
+  -webkit-box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #C76B19;
+          box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #C76B19;
+  -webkit-animation: init-circle-scissors .6s;
+          animation: init-circle-scissors .6s;
+}
+
+.main-game__circle-scissors:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.main-game__circle-scissors__scissors-img {
+  margin: 1rem .7rem 0 0 !important;
+  margin: 1rem .4rem 0 0;
+  width: 7.5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main-game__circle-scissors:hover .main-game__circle-scissors__scissors-img {
+  -webkit-animation: img-animation 1s alternate infinite;
+          animation: img-animation 1s alternate infinite;
+}
+
+.main-game__circle-rock {
+  bottom: -7rem;
+  right: 5rem;
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border: 2.6rem solid #dd405d;
+  -webkit-box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #9E1631;
+          box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #9E1631;
+  -webkit-animation: init-circle-rock .6s;
+          animation: init-circle-rock .6s;
+}
+
+.main-game__circle-rock:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.main-game__circle-rock__rock-img {
+  margin: 1.6rem 0rem 0 0 !important;
+  margin: 1rem .4rem 0 0;
+  width: 7.5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main-game__circle-rock:hover .main-game__circle-rock__rock-img {
+  -webkit-animation: img-animation 1s alternate infinite;
+          animation: img-animation 1s alternate infinite;
 }
 /*# sourceMappingURL=main.css.map */

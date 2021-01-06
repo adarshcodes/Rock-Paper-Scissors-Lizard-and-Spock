@@ -1,0 +1,43 @@
+/* Intial animation for the Circle */
+@keyframes init-circle-paper {
+    0% {
+        transform: translate(16rem, 115px) scale(0.1) rotate(360deg);
+    }
+
+    100%{
+        transform: translate() scale(1);
+    }
+}
+
+@keyframes init-circle-scissors {
+    0% {
+        transform: translate(-16rem, 115px) scale(0.1) rotate(360deg);
+    }
+
+    100% {
+        transform: translate() scale(1);
+    }
+}
+
+@keyframes init-circle-rock {
+    0% {
+        transform: translateY(-145px) scale(0.1) rotate(360deg);
+    }
+
+    100% {
+        transform: translate() scale(1);
+    }
+}
+/* End of Intial animation for the Circle */
+
+/* Image animation for the Circle */
+@keyframes img-animation {
+    0% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+/* End of Image animation for the Circle */
