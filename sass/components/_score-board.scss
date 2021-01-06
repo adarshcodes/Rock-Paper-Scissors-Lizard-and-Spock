@@ -22,6 +22,7 @@
                         font-weight: 700;
                         font-size: 4.5rem;
                         line-height: 3.6rem;
+                        animation: neon-text .08s ease-in-out infinite alternate;
                 }
         }
 
@@ -33,6 +34,9 @@
                 display: flex;
                 justify-content: center;
                 padding: 1.7rem 0 0 .4rem;
+                animation: neon-box .08s ease-in-out infinite alternate;
+
+
 
                 &__text {
                         letter-spacing: .17rem;
