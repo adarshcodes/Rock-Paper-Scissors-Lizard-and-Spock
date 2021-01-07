@@ -154,6 +154,11 @@ body .container {
   text-decoration: none;
 }
 
+body .container-blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
 .final {
   width: 100%;
   padding: 3.3rem 2.5rem 3.5rem 5rem;
@@ -485,5 +490,71 @@ body .container {
   font-size: 7rem;
   color: #3b4363;
   margin-top: -.8rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 95% 93%;
+          transform-origin: 95% 93%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal-container {
+  color: #1f3756;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: 1rem;
+  width: 45rem;
+  height: 46rem;
+  text-align: center;
+}
+
+.modal-container .modal-top {
+  padding: 4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.close-btn:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 /*# sourceMappingURL=main.css.map */
