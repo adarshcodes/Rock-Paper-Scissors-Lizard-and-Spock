@@ -30,17 +30,6 @@
 }
 /* End of Intial animation for the Circle */
 
-/* Image animation for the Circle */
-@keyframes img-animation {
-    0% {
-        transform: rotate(20deg);
-    }
-
-    100% {
-        transform: rotate(-20deg);
-    }
-}
-/* End of Image animation for the Circle */
 
 /* pulse-animation */
   @keyframes super-pulse {

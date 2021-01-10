@@ -7,11 +7,11 @@
 @import "base/utilities";
 
 @import "components/final";
-@import "components/main-game";
 @import "components/score-board";
 @import "components/modal";
 
 
-// @import "components/";
-
 // @import "layout/";
+@import "layout/main-game";
+@import "layout/result-game";
+

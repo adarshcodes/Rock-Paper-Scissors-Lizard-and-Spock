@@ -8,7 +8,6 @@
     width: 22rem;
     height: 22rem;
     border-radius: 50%;
-    background: $color-primary-white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +17,4 @@
     &:active {
         transform: scale(.9);
     }
-}
-
-@mixin circle-img {
-    margin: 1rem .4rem 0 0;
-    width: 7.5rem;
-    transition: all .5s;
 }

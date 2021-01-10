@@ -70,29 +70,6 @@
 }
 
 /* End of Intial animation for the Circle */
-/* Image animation for the Circle */
-@-webkit-keyframes img-animation {
-  0% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  100% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-}
-@keyframes img-animation {
-  0% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  100% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-}
-
-/* End of Image animation for the Circle */
 /* pulse-animation */
 @-webkit-keyframes super-pulse {
   25% {
@@ -271,7 +248,10 @@ body .container-blur {
 }
 
 .main-game {
+  display: none;
   padding: 5rem 0;
+  -webkit-transition: all .5s .5s;
+  transition: all .5s .5s;
 }
 
 .main-game__container {
@@ -289,7 +269,6 @@ body .container-blur {
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,25 +286,15 @@ body .container-blur {
   border: 2.4rem solid #5671f5;
   -webkit-box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #2945C1;
           box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #2945C1;
-  -webkit-animation: init-circle-paper .6s;
-          animation: init-circle-paper .6s;
+  background: #fff url("../images/icon-paper.svg") no-repeat center;
+  background-size: 7.5rem;
+  -webkit-animation: init-circle-paper .8s;
+          animation: init-circle-paper .8s;
 }
 
 .main-game__circle-paper:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-}
-
-.main-game__circle-paper__paper-img {
-  margin: 1rem .4rem 0 0;
-  width: 7.5rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.main-game__circle-paper:hover .main-game__circle-paper__paper-img {
-  -webkit-animation: img-animation 1s alternate infinite;
-          animation: img-animation 1s alternate infinite;
 }
 
 .main-game__circle-scissors {
@@ -335,7 +304,6 @@ body .container-blur {
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,26 +319,15 @@ body .container-blur {
   border: 2.6rem solid #eca922;
   -webkit-box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #C76B19;
           box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #C76B19;
-  -webkit-animation: init-circle-scissors .6s;
-          animation: init-circle-scissors .6s;
+  background: #fff url("../images/icon-scissors.svg") no-repeat center;
+  background-size: 7.5rem;
+  -webkit-animation: init-circle-scissors .8s;
+          animation: init-circle-scissors .8s;
 }
 
 .main-game__circle-scissors:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-}
-
-.main-game__circle-scissors__scissors-img {
-  margin: 1rem .7rem 0 0 !important;
-  margin: 1rem .4rem 0 0;
-  width: 7.5rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.main-game__circle-scissors:hover .main-game__circle-scissors__scissors-img {
-  -webkit-animation: img-animation 1s alternate infinite;
-          animation: img-animation 1s alternate infinite;
 }
 
 .main-game__circle-rock {
@@ -380,7 +337,6 @@ body .container-blur {
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,8 +352,10 @@ body .container-blur {
   border: 2.6rem solid #dd405d;
   -webkit-box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #9E1631;
           box-shadow: 0px 11px 0px -3px #CCD0DB inset, 0 9px 0 0 #9E1631;
-  -webkit-animation: init-circle-rock .6s;
-          animation: init-circle-rock .6s;
+  background: #fff url("../images/icon-rock.svg") no-repeat center;
+  background-size: 7.5rem;
+  -webkit-animation: init-circle-rock .8s;
+          animation: init-circle-rock .8s;
 }
 
 .main-game__circle-rock:active {
@@ -405,17 +363,18 @@ body .container-blur {
           transform: scale(0.9);
 }
 
-.main-game__circle-rock__rock-img {
-  margin: 1.6rem 0rem 0 0 !important;
-  margin: 1rem .4rem 0 0;
-  width: 7.5rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+.hidding-magic {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
-.main-game__circle-rock:hover .main-game__circle-rock__rock-img {
-  -webkit-animation: img-animation 1s alternate infinite;
-          animation: img-animation 1s alternate infinite;
+.showing-magic {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .scoreboard {
