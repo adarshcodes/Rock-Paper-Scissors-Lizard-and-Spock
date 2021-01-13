@@ -40,15 +40,14 @@
                     Score
                     <span class="scoreboard__score-display__score" id="score">12</span>
                 </h2>
-                <h3 class="winner"></h3>
             </div>
         </div>
         <!-- End of Scoreboard Section -->
 
         <!-- Main-Game Section -->
-        <main>
+        <main class="main-section">
             <section class="main-game">
-                <div class="main-game__container" id="main">
+                <div class="main-game__container" id="main-game">
                     <img src="./images/bg-triangle.svg" alt="triangle" class="main-game__triangle">
                     <div class="main-game__circle-paper circle" id="paper"></div>
                     <div class="main-game__circle-scissors circle" id="scissors"></div>
@@ -58,30 +57,30 @@
 
             <!-- Result Section -->
             <section class="result">
-                <div class="player-picked">
-                    <h3 class="player-picked__heading">You Picked</h3>
-                    <div class="player-picked__circle"></div>
-                </div>
+                    <div class="player-picked player-picked-container">
+                        <h3 class="player-picked__heading">You Picked</h3>
+                        <div class="player-picked__circle player-choose"></div>
+                    </div>
 
-                <div class="announcement">
-                    <h2 class="announcement__heading">You Lose</h2>
-                    <div class="announcement__btn">Play Again</div>
-                </div>
+                    <div class="announcement">
+                        <h2 class="announcement__heading heading-winner">You Lose</h2>
+                        <div class="announcement__btn reset">Play Again</div>
+                    </div>
 
-                <div class="house-picked">
-                    <h3 class="house-picked__heading">The house picked</h3>
-                    <div class="house-picked__circle"></div>
-                </div>
+                    <div class="house-picked house-picked-container">
+                        <h3 class="house-picked__heading">The house picked</h3>
+                        <div class="house-picked__circle computer-choose"></div>
+                    </div>
             </section>
-            <!-- End of Result Section -->
-        </main>
+            <!-- End of Result Section
         <!-- End of Main-Game Section -->
+        </main>
 
         <!-- Final Section -->
         <section class="final">
-            <div class="btn-final bonus" id="bonus">
+            <!-- <div class="btn-final bonus" id="bonus">
                 Extended
-            </div>
+            </div> -->
 
             <div class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
