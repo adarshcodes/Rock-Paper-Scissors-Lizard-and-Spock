@@ -35,7 +35,6 @@
                 <li class="scoreboard__list__items">Paper</li>
                 <li class="scoreboard__list__items">Scissors</li>
             </ul>
-
             <div class="scoreboard__score-display">
                 <h2 class="scoreboard__score-display__text">
                     Score
@@ -47,33 +46,36 @@
         <!-- End of Scoreboard Section -->
 
         <!-- Main-Game Section -->
-        <main class="main-game">
-            <div class="main-game__container" id="main">
-                <img src="./images/bg-triangle.svg" alt="triangle" class="main-game__triangle">
+        <main>
+            <section class="main-game">
+                <div class="main-game__container" id="main">
+                    <img src="./images/bg-triangle.svg" alt="triangle" class="main-game__triangle">
+                    <div class="main-game__circle-paper circle" id="paper"></div>
+                    <div class="main-game__circle-scissors circle" id="scissors"></div>
+                    <div class="main-game__circle-rock circle" id="rock"></div>
+                </div>
+            </section>
 
-                <div class="main-game__circle-paper circle" id="paper">
-                    <!-- <img src="./images/icon-paper.svg" alt="paper" class="main-game__circle-paper__paper-img"> -->
+            <!-- Result Section -->
+            <section class="result">
+                <div class="player-picked">
+                    <h3 class="player-picked__heading">You Picked</h3>
+                    <div class="player-picked__circle"></div>
                 </div>
 
-                <div class="main-game__circle-scissors circle" id="scissors">
-                    <!-- <img src="./images/icon-scissors.svg" alt="scissors" -->
-                        <!-- class="main-game__circle-scissors__scissors-img"> -->
+                <div class="announcement">
+                    <h2 class="announcement__heading">You Lose</h2>
+                    <div class="announcement__btn">Play Again</div>
                 </div>
 
-                <div class="main-game__circle-rock circle" id="rock">
-                    <!-- <img src="./images/icon-rock.svg" alt="rock" class="main-game__circle-rock__rock-img"> -->
+                <div class="house-picked">
+                    <h3 class="house-picked__heading">The house picked</h3>
+                    <div class="house-picked__circle"></div>
                 </div>
-            </div>
+            </section>
+            <!-- End of Result Section -->
         </main>
         <!-- End of Main-Game Section -->
-
-        <!-- Result Section -->
-        <main class="result">
-            <div class="result__container" id="result">
-
-            </div>
-        </main>
-        <!-- End of Result Section -->
 
         <!-- Final Section -->
         <section class="final">

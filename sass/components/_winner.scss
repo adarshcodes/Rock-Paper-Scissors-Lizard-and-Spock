@@ -1,0 +1,70 @@
+.result {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 32rem;
+}
+
+.player-picked {
+    @include picked;
+    margin-top: 8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transform: translate(-12rem);
+    animation: result-slide-left 0.5s 2s backwards;
+
+    &__heading {
+        @include result-heading;
+    }
+
+    &__circle {
+        @include circle-common-result;
+        background: $color-primary-white url('../images/icon-paper.svg') no-repeat center;
+        background-size: 10rem;
+        border: 3.5rem solid $color-primary-paper-2;
+        box-shadow: 0px 15px 0px -3px #CCD0DB inset,
+        0 13px 0 0 $color-primary-paper-border;
+        animation: init-circle-result .5s;
+    }
+}
+
+.announcement {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    animation: result-announcement 0.5s ease 2s backwards;
+}
+
+.house-picked {
+    @include picked;
+    margin-top: 8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transform: translate(11rem);
+    animation: result-slide-right 0.5s ease 2s backwards;
+
+    &__heading {
+        @include result-heading;
+    }
+
+    &__circle {
+        @include circle-common-result;
+        background: $color-primary-white url('../images/icon-paper.svg') no-repeat center;
+        background-size: 10rem;
+        border: 3.5rem solid $color-primary-paper-2;
+        box-shadow: 0px 15px 0px -3px #CCD0DB inset,
+            0 13px 0 0 $color-primary-paper-border;
+        animation: init-circle-result .5s 1s backwards;
+    }
+}

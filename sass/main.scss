@@ -1,17 +1,9 @@
-@import "abstract/variables";
 @import "abstract/mixins";
-
+@import "abstract/variables";
 @import "base/animations";
 @import "base/base";
-@import "base/typography";
-@import "base/utilities";
-
 @import "components/final";
-@import "components/score-board";
 @import "components/modal";
-
-
-// @import "layout/";
-@import "layout/main-game";
-@import "layout/result-game";
-
+@import "components/score-board";
+@import "components/pick";
+@import "components/winner";
